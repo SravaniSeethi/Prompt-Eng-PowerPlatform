@@ -35,24 +35,50 @@ Follow these steps to import this solution:
 
 1. **Creating Custom Prompts:** Utilize Power Apps to craft tailored instructions for medical instrument usage.
   Sign in to Power Apps. On the left navigation panel, select AI Hub > AI Prompts  > Crete text using custom prompts
-  ![Alt text](images/Power Platform AI Prompt.jpg)
+  ![Power Platform AI Prompt](https://github.com/SravaniSeethi/Prompt-Eng-PowerPlatform/blob/66ececeb44c8e236a5390d999c1875a2e65f2f90/images/Power%20Platform%20AI%20Prompt.jpg)
   There are many types of prompts to pick from, I used the "Custom task with custom prompts".
-  ![Alt text]()
-  Building the prompt:
-  Context: "I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument:" I added a dynamic value "Medical Instrument" for the user to select (on the PowerApp).
-  Instruction: "Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text."
-  I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument: Medical Instrument . Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text.
-  ![Alt text]()
-3. **Dataverse Table Setup:** Establish a structured database for medical devices.
-4. **Canvas PowerApp Development:** Develop a user-friendly app to retrieve and display prompt-generated instructions.
 
+  Building the prompt:
+  
+  Context: "I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument:" I added a dynamic value "Medical Instrument" for the user to select (on the PowerApp).
+  
+  Instruction: "Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text."
+  
+  Finished Prompt: 
+  
+  ```I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument: Medical Instrument . Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text.```
+  
+  ![Creating a Dynamic Prompt](https://github.com/SravaniSeethi/Prompt-Eng-PowerPlatform/blob/a01644ed72c6512882711785b0249000580daa5f/images/Creating%20a%20Dynamic%20Prompt.jpg)
+
+2. **Dataverse Table Setup:** Establish a structured database for medical devices.
+
+3. **Canvas PowerApp Development:** Develop a user-friendly app to retrieve and display prompt-generated instructions.
+
+    i. Create a blank canvas powerapp, with a simple header. 
+
+    ii. Add the Dataverse table and your prompt as the datasources
+
+    iii. Add a gallery to show all medical devices from the Dataverse table and a text field to show the generated text from the prompt.
+
+    iv. Add the following PowerFx formula for the 'OnSelect' property of the gallery: 
+
+    ```Set(varInstructions, 'Medical Instrument Instructions'.Predict(ThisItem.Name))```
+
+   v. Add a text label on the right half and the 'Text' property set to:
+
+   ```varInstructions.Text```
+   
+  ![Canvas PowerApp Fx](https://github.com/SravaniSeethi/Prompt-Eng-PowerPlatform/blob/a01644ed72c6512882711785b0249000580daa5f/images/Canvas%20PowerApp%20Fx.jpg)
+  
 ## Demo
 
-Explore the demonstration and hands-on implementation within the repository to better understand the functionality.
+Demonstration of the Canvas app to better visualize the functionality.
+
+ ![Demo](https://github.com/SravaniSeethi/Prompt-Eng-PowerPlatform/blob/4f5f1fc649f9ef23b7a40a70d6d01cdde2f4d580/images/PromptEng.gif)
 
 ## Contributing
 
-We welcome contributions! Feel free to fork this repository, make improvements, and submit a pull request.
+Contributions are welcomed! Feel free to fork this repository, make improvements, and submit a pull request.
 
 ## License
 
