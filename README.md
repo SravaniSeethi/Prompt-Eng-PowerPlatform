@@ -34,8 +34,17 @@ Follow these steps to import this solution:
 ## Steps to Create an AI Healthcare Solution from scratch
 
 1. **Creating Custom Prompts:** Utilize Power Apps to craft tailored instructions for medical instrument usage.
-2. **Dataverse Table Setup:** Establish a structured database for medical devices.
-3. **Canvas PowerApp Development:** Develop a user-friendly app to retrieve and display prompt-generated instructions.
+  Sign in to Power Apps. On the left navigation panel, select AI Hub > AI Prompts  > Crete text using custom prompts
+  ![Alt text]()
+  There are many types of prompts to pick from, I used the "Custom task with custom prompts".
+  ![Alt text]()
+  Building the prompt:
+  Context: "I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument:" I added a dynamic value "Medical Instrument" for the user to select (on the PowerApp).
+  Instruction: "Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text."
+  I am a nurse at a children's hospital that needs to instructions on how to use this medical instrument: Medical Instrument . Provide a concise list of instructions to help me use the instrument appropriately. Do not add any additional text.
+  ![Alt text]()
+3. **Dataverse Table Setup:** Establish a structured database for medical devices.
+4. **Canvas PowerApp Development:** Develop a user-friendly app to retrieve and display prompt-generated instructions.
 
 ## Demo
 
