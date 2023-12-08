@@ -29,7 +29,7 @@ Follow these steps to import this solution:
 1. **Download the Unmanaged PowerApps Solution:** Download the zip file from the repo named [PromptEngineeringHealthCare_1_0_0_2.zip](PromptEngineeringHealthCare_1_0_0_2.zip)
 2. **Import Solution to your environment:** Sign in to Power Apps, navigate to the right environment. Go to Solutions > Import Solution > Select the downloaded file from Step 1.
 3. **Publish all customizations:** Once the import process is complete, click on "Publish all customizations".
-4. **Add Sample Data:** Download the csv file named [Sample Data.csv](Sample Data.csv) from the repo and add to your Dataverse table > Add sample values into the "Name" column.
+4. **Add Sample Data:** Download the csv file named [SampleData.csv](SampleData.csv) from the repo and add to your Dataverse table > Add sample values into the "Name" column.
 
 ## Steps to Create an AI Healthcare Solution from scratch
 
