@@ -35,7 +35,7 @@ Follow these steps to import this solution:
 
 1. **Creating Custom Prompts:** Utilize Power Apps to craft tailored instructions for medical instrument usage.
   Sign in to Power Apps. On the left navigation panel, select AI Hub > AI Prompts  > Crete text using custom prompts
-  ![Alt text]()
+  ![Alt text](images/Power Platform AI Prompt.jpg)
   There are many types of prompts to pick from, I used the "Custom task with custom prompts".
   ![Alt text]()
   Building the prompt:
